@@ -9,21 +9,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //syntax
 //let myPromise = new Promise((resolve,reject)=> {})
 //example
-/* let promise = new Promise((resolve,reject)=>{
+let promise = new Promise((resolve, reject) => {
     console.log("hello");
-   resolve("wow") //print hello
-})
-
-let p1romise = new Promise((resolve,reject)=>{
-    reject("error") //threw error
-}) */
+    resolve("wow"); //print hello
+});
+let p1romise = new Promise((resolve, reject) => {
+    reject("error"); //threw error
+});
 //resole hone k bd hame kch kaam karana h to .then() use krenge 
-// let getPromise = () => {
-//     return new Promise((resolve,reject)=> {
-//         console.log("I am promise");
-//         resolve("Promise fullfilled")
-//     })
-// }
+let getPromise = () => {
+    return new Promise((resolve, reject) => {
+        console.log("I am promise");
+        resolve("Promise fullfilled");
+    });
+};
 // let promise = getPromise();
 // promise.then((res)=>{
 //     console.log("HELLO THEN", res); // output: I am promise promise fullfilled HELLO THEN
@@ -39,16 +38,16 @@ let p1romise = new Promise((resolve,reject)=>{
 // promise.catch((err)=>{
 //     console.log("HELLO CATCH", err); //output: I am promise HELLO CATCH
 // })
-// function asyncData(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(()=>{
-//             console.log("data");
-//             console.log("finished successfully");       
-//         },4000)
-//     });
-// }
-// console.log("FETCHING DATA....");
-// let promise = asyncData();
-// promise.then((res)=>{
-//     console.log(res); //output FETCHING DATA....AFTER 4 SEC data finished succesfully
-// })
+function asyncData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data");
+            console.log("finished successfully");
+        }, 4000);
+    });
+}
+console.log("FETCHING DATA....");
+let promise1 = asyncData();
+promise.then((res) => {
+    console.log(res); //output FETCHING DATA....AFTER 4 SEC data finished succesfully
+});

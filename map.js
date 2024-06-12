@@ -20,4 +20,9 @@ const result = array.map((currentValue, index, array) => {
     console.log(`Value: ${currentValue}, Index: ${index}, Array: ${array}`);
     return currentValue * 2;
 });
-console.log(result); // Output: [2, 4, 6, 8]
+console.log(result); //output:
+//Value: 1, Index: 0, Array: 1,2,3,4
+// Value: 2, Index: 1, Array: 1,2,3,4
+// Value: 3, Index: 2, Array: 1,2,3,4
+// Value: 4, Index: 3, Array: 1,2,3,4
+//  [2, 4, 6, 8]
